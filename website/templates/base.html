@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Home{% endblock %}</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous">
+  <!-- Custom styles -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+
+    .navbar {
+      background-color: #343a40;
+      padding: 20px 0;
+    }
+
+    .navbar-brand {
+      font-size: 2rem;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-item {
+      margin-right: 15px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      margin-top: 30px;
+    }
+
+    .alert {
+      margin-top: 20px;
+    }
+
+    .alert-danger {
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+      color: #721c24;
+    }
+
+    .alert-success {
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+      color: #155724;
+    }
+
+    .close {
+      color: inherit;
+    }
+
+    /* Custom additions for FBA.ai */
+    .hero {
+      background-color: #343a40;
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    .feature {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .feature i {
+      font-size: 4rem;
+      color: #007bff;
+    }
+
+    .feature h3 {
+      margin-top: 15px;
+      font-size: 2rem;
+    }
+
+    .feature p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .cta {
+      background-color: #007bff;
+      color: #ffffff;
+      text-align: center;
+      padding: 60px 0;
+      margin-top: 50px;
+    }
+
+    .cta h2 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .cta p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    .cta a {
+      font-size: 1.2rem;
+      padding: 12px 30px;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      background-color: #ffffff;
+      color: #007bff;
+      transition: all 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #007bff;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-brand {
+        font-size: 1.8rem;
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .feature i {
+        font-size: 3rem;
+      }
+
+      .feature h3 {
+        font-size: 1.8rem;
+      }
+
+      .feature p {
+        font-size: 1rem;
+      }
+
+      .cta h2 {
+        font-size: 2.5rem;
+      }
+
+      .cta p {
+        font-size: 1.2rem;
+      }
+
+      .cta a {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">FBA.ai</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ml-auto">
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sign-up">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/note">Feedback</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <h1>Federated Brain Agents (FBA)</h1>
+          <p>The FBA.ai represents a pioneering AI paradigm, combining human cognitive capabilities with specialized AI agents in a federated architecture. This hybrid intelligence system aims to surpass traditional AI by integrating human intuition, creativity, and ethical reasoning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features section -->
+  <section class="feature">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fa fa-users"></i>
+          <h3>Human-AI Collaboration</h3>
+          <p>Centralizing humans in AI systems for ethical oversight and innovative problem-solving.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fa fa-sitemap"></i>
+          <h3>Federated Architecture</h3>
+          <p>Distributed agents collaborating seamlessly, ensuring scalability and robustness.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fa fa-chain"></i>
+          <h3>Blockchain Integration</h3>
+          <p>Enhancing security, transparency, and data integrity through decentralized technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action section -->
+  <section class="cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <h2>Launch</h2>
+          <p>Stay tuned for the official launch of the FBA project, which will revolutionize the AI landscape by combining the best of human and artificial intelligence.</p>
+          <h2>Vision</h2>
+          <p>FBA aims to transform AI development by ensuring ethical alignment, scalability, and practical applicability across various domains. This project promises a new era of AI, driven by human intellect and advanced technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+</body>
+</html>
