@@ -20,7 +20,7 @@ git push -uf origin main
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.fba.ai/brilian/flask-webapp-federated-brain-agents-deployment-aws-lambda/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.fba.ai/brilian/flask-webapp-federated-brain-agents-deployment-aws-lambda/-/settings/integrations) 
 
 ## Collaborate with your team
 
