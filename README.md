@@ -1,4 +1,4 @@
-# Flask-Webapp-Federated-Brain-Agents-Deployment-AWS-Lambda
+# Flask-Webapp-FBA-Deployment-AWS-Lambda
 
 ## Getting started
 
