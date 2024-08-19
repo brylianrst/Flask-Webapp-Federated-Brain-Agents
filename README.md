@@ -13,7 +13,7 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.fba.ai/brilian/fba.ai-final-version-to-aws-brilian.git
+git remote add origin https://gitlab.fba.ai/brilian/flask-webapp-federated-brain-agents-deployment-aws-lambda.git
 git branch -M main
 git push -uf origin main
 ```
