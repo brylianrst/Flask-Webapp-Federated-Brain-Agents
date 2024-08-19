@@ -1,4 +1,4 @@
-# Flask-Webapp-Federated-Brain-Agents Deployment to AWS Lambda (Serverless)
+# Flask-Webapp-Federated-Brain-Agents-Deployment-to-AWS-Lambda
 
 ## Getting started
 
@@ -20,7 +20,7 @@ git push -uf origin main
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.fba.ai/brilian/fba.ai-final-version-to-aws-brilian/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.fba.ai/brilian/F=flask-Webapp-federated-brain-agents-deployment-to-aws-lambda/-/settings/integrations)
 
 ## Collaborate with your team
 
